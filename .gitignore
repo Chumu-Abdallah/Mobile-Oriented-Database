@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+student_management.db
+generated_documents/
+.buildozer/
+bin/
