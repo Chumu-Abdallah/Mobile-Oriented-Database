@@ -105,13 +105,13 @@ class Database:
             return
         cur.execute("""INSERT INTO students(reg_no,full_name,programme,department,academic_year,semester)
                        VALUES(?,?,?,?,?,?)""",
-                    ("IA/BCS/2026/001", "Demo Student", "Bachelor of Computer Science",
+                    ("IA/BCS/2026/001", "Chumu", "Bachelor of Computer Science",
                      "Computer Science", "2026/2027", "Semester I"))
         sid = cur.lastrowid
         salt, digest = hash_password("student123")
         cur.execute("INSERT INTO users(student_id,salt,password_hash) VALUES(?,?,?)", (sid,salt,digest))
         course_data = [
-            ("CS101", "Introduction to Programming", "Semester I"),
+            ("CS101", "Object Oriented Programming", "Semester I"),
             ("CS102", "Database Systems", "Semester I"),
             ("CS103", "Computer Networks", "Semester I"),
         ]
